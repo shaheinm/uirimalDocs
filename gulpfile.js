@@ -20,6 +20,7 @@ var merge = require('merge-stream');
 var path = require('path');
 var fs = require('fs');
 var glob = require('glob');
+var connect = require('gulp-connect');
 
 var destDir = 'dist';
 
@@ -255,6 +256,17 @@ gulp.task('build:ae', ['clean'], function(cb) {
     'vulcanize', 'precache',
     cb);
 });
+
+//gulp-connect setup
+gulp.task('webserver', function() {
+  connect.server({
+    root: 'dist/static',
+    port: 80,
+    livereload: true
+  });
+});
+ 
+gulp.task('default', ['webserver']);
 
 // Load tasks for web-component-tester
 // Adds tasks for `gulp test:local` and `gulp test:remote`

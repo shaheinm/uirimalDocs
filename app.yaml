@@ -6,8 +6,8 @@
 # TODO: Enter your application id below. If you have signed up
 # using cloud.google.com/console use the "project id" for your application
 # id.
-application: uirimalResources
-version: 1
+application: uirimal-resources
+version: 1.0
 #version: 2
 runtime: python27
 api_version: 1
