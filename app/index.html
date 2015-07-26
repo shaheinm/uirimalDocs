@@ -16,7 +16,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Polymer Starter Kit" />
-  <title>DriveCeption</title>
+  <title>UIRIMAL Resources</title>
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <!-- Chrome for Android theme color -->
@@ -64,7 +64,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Drawer Toolbar -->
         <paper-toolbar id="drawerToolbar">
-          <span class="paper-font-title">Menu</span>
+          <span class="paper-font-title" onclick="location.href='http://uirimal.com';" style="cursor: pointer;">UIRIMAL</span>
         </paper-toolbar>
 
         <!-- Drawer Content -->
@@ -80,9 +80,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </template>
             <!--About - displayed only if the parameter id provided-->
             <template is="dom-if" if="{{aboutFileId}}">
-              <a data-route="about" href="/about">
+              <a data-route="about" href="http://uirimal.com">
                 <iron-icon icon="info"></iron-icon>
-                <span>About</span>
+                <span>Back to UIRIMAL.com</span>
               </a>
             </template>
             <!--Social links-->
@@ -90,7 +90,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-item data-route$="[[route]]" id="socialsMenu" class="layout vertical">
                 <div on-tap="toggleSocialCollapse" class="self-stretch flex layout horizontal center">
                   <iron-icon icon="account-circle"></iron-icon>
-                  <span>All My Socials</span>
+                  <span>Social Media Links</span>
                 </div>
                 <iron-collapse id="socialSubmenu" class="layout vertical">
                   <template is="dom-repeat" items="[[socials]]">
@@ -123,6 +123,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
             <section data-route="home">
+              <h2>Welcome to UIRIMAL!</h2>
+              <p>Please find all relevant documents for the 2015 UIRIMAL Conference here.  This site will be updated continuously, so 
+                check back often to keep yourself up-to-date!</p>
+              <p>Thanks,</p>
+              <p>UIRIMAL Staff</p>
+              <br/>
+              <h3>Recently Updated Documents:</h3>
               <articles-list article-list="{{fullArticleList}}"></articles-list>
             </section>
 
